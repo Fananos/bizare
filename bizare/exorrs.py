@@ -3,7 +3,7 @@ from enum import Enum
 
 class Exrorr(Exception):
     """
-    Custome Exceptions
+    Custom Exceptions
     """
     pass
 

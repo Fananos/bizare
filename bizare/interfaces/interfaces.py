@@ -1,15 +1,30 @@
 from abc import ABCMeta
 import abc
-from typing import Union
-from pyTF.pytflog import get_logger
+from bizare.pytflog import get_logger
 
 
 log = get_logger("interfaces", False)
 
 
+class InterfaceFactory(metaclass=ABCMeta):
+    """
+    Interface for factory
+    """
+
+    @classmethod
+    def __subclasshook__(cls, subclass):
+        return (hasattr(subclass, 'init') and
+                callable(subclass.init)
+                )
+
+    @abc.abstractmethod
+    def init(self):
+        raise NotImplemented
+
+
 class InterfaceReadWriteBuffer(metaclass=ABCMeta):
     """
-    Interface read write
+    Interface read/write for buffers
     """
     @classmethod
     def __subclasshook__(cls, subclass):

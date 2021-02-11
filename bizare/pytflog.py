@@ -1,6 +1,6 @@
 import logging
 
-
+# TODO hmmm not sure that is correct way to do it
 def get_logger(logger_name, create_file=False):
     # create logger for prd_ci
 
@@ -12,7 +12,7 @@ def get_logger(logger_name, create_file=False):
 
     if create_file:
         # create file handler for logger.
-        fh = logging.FileHandler('pyTF.log')
+        fh = logging.FileHandler('bizare.log')
         fh.setLevel(level=logging.DEBUG)
         fh.setFormatter(formatter)
     # reate console handler for logger.

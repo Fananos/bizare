@@ -1,6 +1,6 @@
-from pyTF.pytflog import get_logger
-from pyTF.exorrs import *
-from pyTF.measurement_equipment.Devices import *
+from bizare.pytflog import get_logger
+from bizare.exorrs import *
+from bizare.measurement_equipment.Devices import *
 
 log = get_logger("pyFT.measurement.equipment.factory")
 
@@ -9,7 +9,7 @@ class Factory:
     """
     Factory of measurement equipment
     """
-
+    # Example
     @staticmethod
     def get_device(ip, port):
         """
